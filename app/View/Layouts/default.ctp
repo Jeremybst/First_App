@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<?php echo $this->Html->charset(); ?>
-		<title>Cap Forum</title>
+		<title>Acceuil</title>
 		<?php
 			echo $this->Html->meta('icon');
 			echo $this->Html->css('bootstrap.min.css');

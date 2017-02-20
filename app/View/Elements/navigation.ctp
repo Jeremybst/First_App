@@ -13,6 +13,7 @@
           <ul class="nav navbar-nav navbar-right">
             <?php if(!$this->Session->check('Auth.User')):?>
             <li><?php echo $this->Html->link(__('Login'),array('controller'=>'users','action'=>'login'))?></li>
+            <li><?php echo $this->Html->link(__('Ajouter'),array('controller' => 'posts', 'action' => 'add')); ?></li>
             <?php else: ?>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $this->Session->read('Auth.User.username');?> <b class="caret"></b></a>
