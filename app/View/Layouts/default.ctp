@@ -14,6 +14,9 @@
 		 	body {
 				padding-top: 70px;
 			}
+			th, td {
+				padding-left: 20px;
+			}
 		 </style>
  	</head>
  	<body>

@@ -4,6 +4,7 @@
         <th>Id</th>
         <th>Titre</th>
         <th>Créé le</th>
+        <th>Actions</th>
     </tr>
 
     <!-- Boucle foreach pour afficher les posts -->
@@ -16,6 +17,12 @@
             array('controller' => 'posts', 'action' => 'view', $post['Post']['id'])); ?>
         </td>
         <td><?php echo $post['Post']['created']; ?></td>
+        <td><?php echo $this->Html->link('Editer',array('action' => 'edit', $post['Post']['id'])); ?></td>
+        <td><?php echo $this->Form->postLink(
+                'Supprimer',
+                array('action' => 'delete', $post['Post']['id']),
+                array('confirm' => 'Etes-vous sûr ?'));
+            ?></td>
     </tr>
     <?php endforeach; ?>
     <?php unset($post); ?>
